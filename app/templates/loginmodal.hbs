@@ -1,7 +1,7 @@
 
 
 <div class="main-container" align="center">
-<h1>this is login page</h1>
+
 <div class="container">
 	<div class="row">
         <div class="col-md-4 col-md-offset-4">
@@ -12,15 +12,18 @@
                 <div class="panel-body">
                     <form role="form">
                         <fieldset>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                            </div>
+                             <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        {{validated-input  type="text" model=this  valuePath='email'  placeholder="username or email"}}                                        
+                                    </div>
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        {{validated-input  type="password"  model=this  valuePath='password' placeholder="password"}}
+                                    </div>
                             <!-- Change this to a button or input when using this as a form -->
-                            <button type="button" class="btn btn-success btn-block">Login</button>
-                            <p>New Member? <a href="signUp.html" class="">Sign up</a></p>
+                            <button type="button" class="btn btn-success btn-block" {{action "login"}}>Login</button>
+                            <!--<p>New Member? {{#link-to 'loginmodal'}}Sign up{{/link-to}}</p>-->
+                            <p {{action 'toggleModal'}}>New user</p>
                         </fieldset>
                     </form>
                 </div>
@@ -28,4 +31,16 @@
         </div>
     </div>
 </div>
+{{#if isShowingModal}}
+{{isShowingModal}}
+{{#modal-dialog close="toggleModal"
+               targetAttachment="center"
+                  translucentOverlay=true}}
+        <div>
+            <h1>hello</h1>
+        </div>
+
+  {{/modal-dialog}}
+
+{{/if}}
 </div>
