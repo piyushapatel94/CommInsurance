@@ -1,2 +1,107 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
+@import "ember-bootstrap/bootstrap";
+
+
+.mini-submenu{
+  display:none;  
+  background-color: rgba(0, 0, 0, 0);  
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  padding: 9px;  
+  /*position: relative;*/
+  width: 42px;
+ background-color: coral;
+
+}
+
+.mini-submenu:hover{
+  cursor: pointer;
+}
+
+.mini-submenu .icon-bar {
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  width: 22px;
+  margin-top: 3px;
+
+}
+
+.mini-submenu .icon-bar {
+  background-color: #000;
+}
+
+#slide-submenu{
+  background: rgba(0, 0, 0, 0.45);
+  display: inline-block;
+  padding: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color:black;
+    border-width: 10px;
+    
+}
+/*body, html {
+    height: 100%;
+    margin: 0;
+     background: url("assets/image/backimage.jpeg");
+
+   
+    height: 100%; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-image: url("assets/image/backimage.jpg");
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+ 
+    background-color: coral;;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-size: 15px;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: coral;
+    border-color: #337ab7;
+    border-top-color: rgb(51, 122, 183);
+    border-right-color: rgb(51, 122, 183);
+    border-bottom-color: rgb(51, 122, 183);
+    border-left-color: rgb(51, 122, 183);
+}
+
+.btn-success {
+    color: #fff;
+    background-color: coral;
+    border-color: coral;
+}
+
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: coral;
+    border-color: #b76a33;
+}
